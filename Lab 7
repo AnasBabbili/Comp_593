@@ -1,0 +1,68 @@
+from pprint import pprint
+def main():
+    my_info = {
+        "name": "Anas babbili",
+        "student_id": 10262075,
+        "pizza_toppings": [
+            "green olives",
+            "chicken",
+            "onions",
+        ],
+        "movies": [
+            {"Invincible": 'Action Fiction'
+            },
+            {"Spider-Man: No Way Home": "Action/Adventure"
+            },
+        ]        
+    }
+
+    #step 2 
+    new_movie = {"The Lord of the Rings": "Fantasy Fiction"}
+    my_info["movies"].append(new_movie)
+
+
+    #step 3 
+    new_topings = ('black olives', 'tomato')
+    add_pizza_toppings(my_info, new_topings)
+
+
+    pprint(my_info)
+
+    #step 4
+    print_sentence(my_info)
+    print_pizza(my_info)
+    print()
+    print_movie_genre(my_info)
+    print_movie_title(my_info)
+
+#step 3 function
+def add_pizza_toppings(my_info, pizza_toppings):
+    for new_toppings in pizza_toppings:
+        my_info["pizza_toppings"].append(new_toppings)
+        my_info["pizza_toppings"].sort()
+
+    
+#step 4 functions
+def print_sentence(my_info):
+    print("Hi Joe, my name is " + my_info["name"] + ", and my student id is " + str(my_info["student_id"]) + '.')
+    
+def print_pizza(my_info):
+    toppings = my_info["pizza_toppings"]
+    print("My ideal pizza has", end=' ')
+    for t in toppings:
+        print(t, end=', ')
+
+def print_movie_genre(my_info):
+    print("I like to watch", end=' ')
+    for g in my_info["movies"]:
+        print(g, end=', ')
+    print("movies.")
+
+def print_movie_title(my_info):
+    print("Some of my favourites are")
+    for g in my_info["movies"]:
+        print(g, end=', ')
+    print("!")
+    
+
+main()

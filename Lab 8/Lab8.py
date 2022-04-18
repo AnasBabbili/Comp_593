@@ -6,7 +6,7 @@ def main():
     #create the window
     root = Tk()
     root.title("Pokemon Info Viewer")
-    #root.iconbitmap("Poke-Ball.ico")
+    root.iconbitmap("Poke-Ball.ico")
 
     #create the window frames
     usr_input_frm = ttk.Frame(root)

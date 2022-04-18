@@ -16,5 +16,5 @@ def get_poke_info(poke_name):
         print("Sucess")
         return response.json()
     else:
-        print("Failed. Response Code:", response.status_code)
+        print("Failed. Invalid Pokemon name entered. Try again")
         return

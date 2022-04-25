@@ -1,4 +1,6 @@
 import requests
+from tkinter import *
+from tkinter import ttk
 
 def get_poke_info(poke_name):
     """
@@ -16,5 +18,12 @@ def get_poke_info(poke_name):
         print("Sucess")
         return response.json()
     else:
-        print("Failed. Invalid Pokemon name entered. Try again")
+        #print("Failed. Incorrect Pokemon name entered. Try again")
+        root = Tk()
+        root.geometry('300x100')
+        error_frm = ttk.Frame(root)
+        error_frm.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
+
+        error_msg = ttk.Label(error_frm, text = "Invalid Pokemon name enterd. Try again")
+        error_msg.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
         return

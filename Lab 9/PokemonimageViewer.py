@@ -50,8 +50,7 @@ def main():
 
     def btn_set_desktop_click():
         pokemon_name = cbo_pokemon_sel.get()
-        image_path = os.path.join(images_dir, pokemon_name + '.png')
-        set_desktop_background_image(image_path)
+        image_path = os.path
 
 
     btn_set_desktop = ttk.Button(frm, text='Set as Desktop Image', command=btn_set_desktop_click)
